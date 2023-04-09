@@ -1,0 +1,74 @@
+
+label {
+    margin-bottom: 5px;
+}
+input {
+    margin-bottom: 10px;
+}
+
+.signin-or-signup {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 18vh;
+    padding: 0 20px;
+    input {
+        margin-bottom: 20px;
+    }
+    .btn  {
+        background: $primary;
+        color:$second;
+        &:hover {
+            background:$second ; 
+            color:$second;
+        }
+        &:active {
+            background: $second !important; 
+            color:$second !important;
+        }
+    }
+    
+}
+.username {
+    max-width: 400px;
+    margin-top: 20px;
+    input {
+        margin-bottom: 20px;
+    }
+    .btn {
+        background: $primary;
+        color:$second;
+        max-width: 100px;
+        &:hover {
+            background: $second; 
+            color:$second !important;
+        }
+        &:active {
+            background: $second !important; 
+            color:$second !important;
+        }
+    }
+    
+}
+form {
+    display: grid;
+}
+
+.signup-link {
+    text-decoration: underline;
+    color: $primary;
+}
+.is-danger {
+    color: $danger;
+}
+
+.VueCarousel-slide {
+    background: $primary;
+    margin-right: 10px;
+    width: 40px;
+    min-height: 100px;
+   
+  }
+ h1 {
+    font-size: 2rem !important;
+    text-align: center;
+ }
