@@ -16,14 +16,14 @@ input {
     }
     .btn  {
         background: $primary;
-        color:$second;
+        color:$secondary;
         &:hover {
-            background:$second ; 
-            color:$second;
+            background:$secondary ; 
+            color:$secondary;
         }
         &:active {
-            background: $second !important; 
-            color:$second !important;
+            background: $secondary !important; 
+            color:$secondary !important;
         }
     }
     
@@ -36,15 +36,15 @@ input {
     }
     .btn {
         background: $primary;
-        color:$second;
+        color:$secondary;
         max-width: 100px;
         &:hover {
-            background: $second; 
-            color:$second !important;
+            background: $secondary; 
+            color:$secondary !important;
         }
         &:active {
-            background: $second !important; 
-            color:$second !important;
+            background: $secondary !important; 
+            color:$secondary !important;
         }
     }
     
@@ -61,13 +61,7 @@ form {
     color: $danger;
 }
 
-.VueCarousel-slide {
-    background: $primary;
-    margin-right: 10px;
-    width: 40px;
-    min-height: 100px;
-   
-  }
+
  h1 {
     font-size: 2rem !important;
     text-align: center;
