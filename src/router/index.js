@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SignIn from "../views/signin/SigIn.vue"
-import Discovery  from "../views/discovery/Discovery.vue"
+import Discovery  from "../views/discovery/Discovery.vue";
+import Username from "..//views/username/Username.vue";
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,6 +20,15 @@ const routes = [
     path: '/discovery',
     name: 'discovery',
     component: Discovery,
+    meta: {
+      login: true
+    }
+  
+  },
+  {
+    path: '/username',
+    name: 'username',
+    component: Username,
     meta: {
       login: true
     }
