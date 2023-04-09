@@ -38,7 +38,6 @@ computed: {
 },
 async created() {
   try{
-    console.log('ois')
     this.isLoading = true;
       if(window.localStorage.getItem('token')){
         this.isLoading = true;
