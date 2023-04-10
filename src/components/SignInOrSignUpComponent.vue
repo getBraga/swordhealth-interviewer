@@ -1,12 +1,12 @@
 <template>
   <section :class="signinOrSignup? 'signin-or-signup': 'username'">
  
-    <h1  :class=" signinOrSignup? 'text-center mb-3': ' mb-3'">{{ tittle }}</h1>
+    <h1  :style="!signinOrSignup?'text-align: left':''">{{ tittle }}</h1>
     <form >
 
       <div  v-if="!signInPage">
         <b-field label-for="username" :label="signinOrSignup ? 'Username': 'Username*'" >
-          <b-input id="username" placeholder="Username" name="username" ></b-input>
+          <b-input id="username" placeholder="Username" name="username" v-model="usernameInput" required></b-input>
         </b-field>
       </div>
 
@@ -19,14 +19,14 @@
       <div v-if="signinOrSignup">
         
         <b-field label-for="password" label="Password">
-          <b-input type="password" id="password" placeholder="******" name="password" v-model="passwordInput"></b-input>
+          <b-input type="password" id="password" placeholder="******" name="password" v-model="passwordInput" required></b-input>
         </b-field>
       </div>
 
       <b-button type="is-primary" class="btn" @click.prevent="methodUser()" >{{ buttonText }} </b-button>
       <span v-show="msgError" :class=" signinOrSignup? 'is-danger text-center': 'is-danger'">{{ msgError }}</span>
-      <p v-if="signInPage">Don't have an account?   <router-link class="signup-link" to="/signup">Click here to sign up.</router-link></p>
-      <p v-if="signinOrSignup && !signInPage" class="text-center"> <router-link class="signup-link" to="/signin">Click here to sign in.</router-link></p>  
+      <p v-if="signInPage" class="msg-signup-or-signin">Don't have an account?   <router-link class="signup-link" to="/signup">Click here to sign up.</router-link></p>
+      <p v-if="signinOrSignup && !signInPage" class="msg-signup-or-signin"> <router-link class="signup-link" to="/signin">Click here to sign in.</router-link></p>  
     </form>
   </section>
 </template>
