@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import service from "./service/service";
-  import TheHeaderVue from "./components/TheHeader.vue";
+import TheHeaderVue from "./components/TheHeader.vue";
 
   
 export default {
@@ -30,25 +29,11 @@ computed: {
   }
 },
 
-async created() {
-  try{
-   
-      if(window.localStorage.getItem('token')){
-        const {data}= await service.validToken()
-        const [user]  = data.users
-        this.$store.commit("GET_USER", user)
-      }
-     
-    }catch(err) {
-      console.log('errrorr')
-      window.localStorage.removeItem("token")
-     
-    }
-},
 async updated() {
   try{
     this.isLoading = true;
-   await service.validToken()
+    if(this.allowHeader) 
+       await this.$store.dispatch("validateToken")
 
 
 }catch(err) {
