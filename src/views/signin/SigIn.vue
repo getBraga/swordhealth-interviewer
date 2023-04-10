@@ -19,7 +19,7 @@
   
 <script>
  import SignInOrSignUpComponent from './../../components/SignInOrSignUpComponent.vue';
- import service from "./../../service/service"
+
  export default {
     name: "SigninView",
     components: {
@@ -39,24 +39,31 @@
      async signIn() {
        try{
         this.isLoading = true;
-        const token =  await service.signIn({
+        const user = {
           email: this.email,
-          password: this.password,
-          returnSecureToken:	true
-        })
-       window.localStorage.setItem("token",token.data.idToken)
-       const {data} =  await service.validToken()
-        const [user] = data.users
-        this.$store.commit("GET_USER", user)
-        this.error ="";
-        
-        this.$router.push({name: "home"})
-        this.isLoading = true;
-       }catch(err) {
-        if(err.response.status === 400){
-          this.error = "invalid email or password"
-          this.isLoading = false;
+          password: this.password
         }
+        await this.$store.dispatch("sigIn",  user)
+        this.error ="";
+        this.$buefy.toast.open({
+              duration: 1000,
+                    message: `successfully logged in user!`,
+                    position: 'is-bottom',
+                    type: 'is-success'
+                })
+        this.isLoading = false;
+        this.$router.push({name: "home"})
+        
+       }catch(err) {
+
+          this.$buefy.toast.open({
+                    duration: 5000,
+                    message: `${err.response.data.error.message}`,
+                    position: 'is-bottom',
+                    type: 'is-danger'
+                })
+          this.isLoading = false;
+        
        }
       }
     }
