@@ -48,7 +48,7 @@ export default {
       this.email = this.$store.state.user.email 
       this.isLoading = false
      }catch(err) {
-     if( err.response.data.error.message == "TOKEN_EXPIRED"){
+     if(err.response && err.response.data.error.message == "TOKEN_EXPIRED" ){
      this.$router.push({name: "signin"})
     }
      }
