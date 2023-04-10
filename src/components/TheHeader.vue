@@ -12,9 +12,6 @@
 </template>
 
 <script>
-import service from '@/service/service'
-
-
 export default {
 name: "TheHeader",
 data(){
@@ -33,17 +30,15 @@ components: {
 },
 computed: {
   name(){
-    return this.$store.state.user.name;
+    return  this.$store.getters.firstName;
   }
 },
 async created() {
   try{
-    this.isLoading = true;
+  
       if(window.localStorage.getItem('token')){
         this.isLoading = true;
-        const {data}= await service.validToken()
-        const [user]  = data.users
-        this.$store.commit("GET_USER", user)
+        await this.$store.dispatch("validateToken")
         this.isLoading = false
       }
      
