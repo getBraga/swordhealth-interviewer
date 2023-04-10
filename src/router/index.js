@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SignIn from "../views/signin/SigIn.vue"
 import Discovery  from "../views/discovery/Discovery.vue";
-import Username from "..//views/username/Username.vue";
+import Username from "../views/username/Username.vue";
+import SignUp from "../views/signup/SignUp.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,8 +27,8 @@ const routes = [
   
   },
   {
-    path: '/username',
-    name: 'username',
+    path: '/user',
+    name: 'user',
     component: Username,
     meta: {
       login: true
@@ -38,6 +39,11 @@ const routes = [
     path: '/signin',
     name: 'signin',
     component: SignIn
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: SignUp
   },
 ]
 
