@@ -77,3 +77,47 @@ form {
     position: relative;
     top: -20px;
  }
+
+
+   .VueCarousel-inner {
+     max-width:89%;
+
+   }
+
+   .VueCarousel-slide {
+    max-width: 250px !important;
+    height: 100px;
+    margin-right: 10px;
+    background: $secondary;
+    
+    display: flex;
+    p {
+        flex: 1; 
+        margin-left: 5px;
+    }
+    span {
+        position: relative;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
+   }
+
+.discovery {
+    h1 {
+        text-align: left;
+        margin: 10px 0;
+    }
+    margin-bottom: 10px;
+}
+.color-toogle {
+    background-color: $secondary !important;
+}
+.toogle  {
+    margin-top: 50px !important;
+   li{
+    display: inline;
+    margin-right:   10px;
+   }
+    
+}
