@@ -6,7 +6,9 @@ import buefy from "buefy";
 import PageLoading from "./components/PageLoading.vue"
 import 'buefy/dist/buefy.css'
 import "@/assets/scss/main.scss";
+import VueCarouse from 'vue-carousel';
 
+Vue.use(VueCarouse);
 Vue.use(buefy)
 Vue.config.productionTip = false
 Vue.component("PageLoading", PageLoading)
