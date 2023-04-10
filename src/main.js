@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import buefy from "buefy";
 import PageLoading from "./components/PageLoading.vue"
+import 'buefy/dist/buefy.css'
 import "@/assets/scss/main.scss";
 
 Vue.use(buefy)
