@@ -1,4 +1,0 @@
-  [build]
-  command = "npm run build"
-  commandOrigin= "config"
-  publish = "dist"
