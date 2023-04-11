@@ -8,12 +8,14 @@
     :perPageCustom="[[768, 3], [1024, 5]]"  
     :paginationEnabled="false"
     >
-  <slide v-for="book in books.myBooks.stars" :key="book.id + 1">
+  <slide v-for="book in books.myBooks.stars" :key="book.id + 1" class="teste">
     
-    <div><p class="text-center">{{ book.title }}</p>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
     <span class="fa fa-star" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
    
   </slide>
  
@@ -52,11 +54,14 @@
     >
   <slide v-for="book in books.vue.books" :key="book.id + 1" class="slide">
     
-   
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
+   
+ 
    
   </slide>
  
@@ -85,10 +90,13 @@
     >
   <slide v-for="book in books.typescript.books" :key="book.id + 1" class="slide">
     
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
+   
    
   </slide>
  
@@ -116,10 +124,14 @@
     >
   <slide v-for="book in books.javascript.books" :key="book.id + 1" class="slide">
     
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
+   
+   
    
   </slide>
  
@@ -147,10 +159,14 @@
     >
   <slide v-for="book in books.go.books" :key="book.id + 1" class="slide">
     
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
+   
+   
   </slide>
  
 </carousel>
@@ -175,10 +191,14 @@
     >
   <slide v-for="book in books.css.books" :key="book.id + 1" class="slide">
     
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
+   
+   
    
   </slide>
  
@@ -203,11 +223,12 @@
     :paginationEnabled="false"
     >
   <slide v-for="book in books.node.books" :key="book.id + 1" class="slide">
-    
-    <div><p class="text-center">{{ book.title }}</p>
-    <span :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)"></span></div>
+    <div class="slide-container">
+      <div><p class="text-center">{{ book.title }}</p>
+    <span   :class="book.star ?'fa fa-star icon-star icon-star':'fa fa-star-o icon-star icon-star'" @click="starBook(book)" ></span></div>
     
     <p class="updated">{{ book.updated }}</p>
+    </div>
    
   </slide>
  
