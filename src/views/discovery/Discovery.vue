@@ -34,7 +34,7 @@
         <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                  class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
@@ -68,7 +68,7 @@
       <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                    class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
@@ -99,7 +99,7 @@
       <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                   class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
@@ -130,7 +130,7 @@
       <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                    class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
@@ -160,7 +160,7 @@
       <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                    class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
@@ -189,7 +189,7 @@
       <b-dropdown aria-role="list" v-model="typeSort" >
             <template #trigger="{ active }">
                 <b-button
-                  
+                    class="button-toggle"
                     :focusable="false"
                     :icon-right="active ? 'menu-up' : 'menu-down'"   size="is-large"> <i class="fa fa-angle-down" aria-hidden="true"></i></b-button>
             </template>
