@@ -86,14 +86,16 @@ form {
 
    .VueCarousel-slide {
     max-width: 250px !important;
-    height: 100px;
+    height: 120px;
     margin-right: 10px;
     background: $secondary;
     
+   div {
     display: flex;
+ 
     p {
         flex: 1; 
-        margin-left: 5px;
+        text-align: center;
     }
     span {
         position: relative;
@@ -101,8 +103,12 @@ form {
         right: 5px;
         cursor: pointer;
     }
+}
    }
-
+.updated {
+    text-align: center;
+    margin-top: 50px;
+}
 .discovery {
     h1 {
         text-align: left;
@@ -120,4 +126,43 @@ form {
     margin-right:   10px;
    }
     
+}
+
+.dropdown-content {
+    background: $secondary !important;
+}
+.button  {
+    border: none !important;
+    &:focus { 
+        box-shadow: none !important;
+    }
+}
+a.dropdown-item.is-active {
+    background: #c9c9c9 !important;
+}
+
+.icon-star {
+    display: none;
+}
+.VueCarousel-slide{
+    flex-wrap: wrap;
+    padding: 5px;
+    p {
+        max-width: 100%;
+        padding: 0 10px ;
+    }
+}
+.VueCarousel-slide:hover{
+    
+    transform: scale(1.2) !important;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    .icon-star {
+        display: block;
+    }
+}
+
+.slide {
+    padding: 10px;
+    height: 140px;
 }
