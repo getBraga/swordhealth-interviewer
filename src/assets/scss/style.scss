@@ -23,6 +23,10 @@ input {
     color:$secondary;
     &:active, &:hover {
         background: rgb(68, 68, 68) !important;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+    &:active {
+        transform: scale(1.05);
     }
 }
 .username {
@@ -118,10 +122,12 @@ form {
 .dropdown-content {
     background: $secondary !important;
 }
-.button  {
+.button-toggle  {
     border: none !important;
+    transform: scale(1);
     &:focus {
         box-shadow: none !important;
+        transform: scale(1);
     }
 }
 a.dropdown-item.is-active {
