@@ -14,19 +14,16 @@ input {
     input {
         margin-bottom: 20px;
     }
-    .btn  {
-        background: $primary;
-        color:$secondary;
-        &:hover {
-            background:$secondary ; 
-            color:$secondary;
-        }
-        &:active {
-            background: $secondary !important; 
-            color:$secondary !important;
-        }
+   
+
+}
+
+.btn  {
+    background: $primary;
+    color:$secondary;
+    &:active, &:hover {
+        background: rgb(68, 68, 68) !important;
     }
-    
 }
 .username {
     max-width: 400px;
@@ -35,19 +32,9 @@ input {
         margin-bottom: 20px;
     }
     .btn {
-        background: $primary;
-        color:$secondary;
         max-width: 100px;
-        &:hover {
-            background: $secondary; 
-            color:$secondary !important;
-        }
-        &:active {
-            background: $secondary !important; 
-            color:$secondary !important;
-        }
     }
-    
+
 }
 form {
     display: grid;
@@ -89,12 +76,12 @@ form {
     height: 120px;
     margin-right: 10px;
     background: $secondary;
-    
+
    div {
     display: flex;
- 
+
     p {
-        flex: 1; 
+        flex: 1;
         text-align: center;
     }
     span {
@@ -125,7 +112,7 @@ form {
     display: inline;
     margin-right:   10px;
    }
-    
+
 }
 
 .dropdown-content {
@@ -133,7 +120,7 @@ form {
 }
 .button  {
     border: none !important;
-    &:focus { 
+    &:focus {
         box-shadow: none !important;
     }
 }
@@ -153,7 +140,7 @@ a.dropdown-item.is-active {
     }
 }
 .VueCarousel-slide:hover{
-    
+
     transform: scale(1.2) !important;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 20;
